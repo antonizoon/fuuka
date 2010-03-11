@@ -16,6 +16,7 @@ Apart from standard modules that you probably already have (CGI, Carp, Data::Dum
   * Digest::SHA1
   * LWP
   * DBD::mysql (Important: you need version >= 4.0, otherwise Unicode characters will get messed up in the database. Do {{{perl -MDBD::mysql -e 'print "$DBD::mysql::VERSION\n"'}}} to check)
+  * threads::shared ships with Perl, but we require version >= 1.21. Do {{{perl -Mthreads::shared -e 'print "$threads::shared::VERSION\n"'}}} to check which version you have. If necessary, either upgrade your copy of Perl to a more recent version (both 5.8.9+ and 5.10.1+ should ship with a suitable version of this module) or just the threads::shared module itself (from CPAN, for example).
 
 ==FreeBSD ports==
 If you're running FreeBSD, just install the following ports:
