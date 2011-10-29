@@ -7,7 +7,7 @@
   * gnuplot (version >= 4.2, gd with PNG support)
   * Ability to run daemons / background processes (GNU screen recommended)
   * Around 110~250 MiB of RAM per board being archived
-
+  * About 2 GiB of extra RAM to run the (optional, but much faster) Sphinx search backend for a board with a number of posts similar to /a/ (as of late 2011)
  
 ==Perl modules==
 Apart from standard modules that you probably already have (CGI, Carp, Data::Dumper, Encode, Time::!HiRes), you'll also need the following perl modules installed:
