@@ -32,4 +32,5 @@ If you're running FreeBSD, just install the following ports:
   * databases/p5-DBD-mysql
   * devel/p5-!DateTime 
   * devel/p5-!DateTime-!TimeZone
+  * converters/p5-MIME-Base64-URLSafe
   * math/gnuplot (you can disable all the options in graphics/gd and all the options except for gd in math/gnuplot to avoid building X11)
