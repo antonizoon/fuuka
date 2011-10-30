@@ -36,7 +36,7 @@ It is strongly recommended to use Sphinx if you have a public archive featuring 
 }}} 
   Don't forget to readd it if you ever want to switch back to the MySQL fulltext search method!
 
-== Gory Details ==
+= Gory Details =
 Sphinx indexes are static. That means you cannot update an existing index, you have to throw it away and start all over. It's obviously not feasible to regenerate indexes with multiple GBs every few minutes. However, you can perform queries over multiple indexes. Therefore, for each board, we have:
 
   * `<board>_ancient` holds the gigantic index, starting from the beginning of time, until the point where you manually ran it.
