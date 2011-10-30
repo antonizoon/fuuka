@@ -1,4 +1,5 @@
 #summary Fuuka system requirements
+#labels Featured
 
 ==System requirements== 
   * Recent version of perl (anything >= 5.8.X should be okay, must be compiled with ithreads. Do {{{perl -V | grep ithread}}} to check)
