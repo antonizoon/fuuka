@@ -7,7 +7,7 @@ LOCATION_HTTP in {{{board-config.pl}}} changes how fuuka outputs URLs. It defaul
 = Howto =
 
   # Edit LOCATION_HTTP. Change it to the desired root of your archive, but don't include a trailing slash. For example, if you want to have URLs like http://archive.example.com/a/, use an empty string ({{{''}}}). If you want to have URLs like http://example.com/archive/a/, use {{{'/archive'}}}
-  # Add the following rule to your .htaccess. Adjust accordingly, RewriteBase needs to be set to the same thing as LOCATION_HTTP (but with a trailing slash).
+  # Add the following rule to your .htaccess. Adjust accordingly, {{{RewriteBase}}} needs to be set to the same thing as LOCATION_HTTP (but with a trailing slash).
 {{{
 DirectoryIndex cgi-board.pl index.html index.php
 RewriteEngine On
