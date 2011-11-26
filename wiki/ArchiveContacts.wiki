@@ -1,0 +1,12 @@
+#summary Contact information for various fuuka archivers
+
+= Introduction =
+
+Fuuka is the software used to run various 4chan archivers. It is no longer actively maintained. Moreover, neither me (Eksopl) nor the original author maintains a running archive. If you have an issue with a specific archive, look below for information on how to contact them. Posts and bug requests made here will not be read by the people who *can* do something about your request, so please contact directly the people that run the site you want to reach.
+
+= Details =
+|| *Archive* || *Contact* ||
+|| [http://archive.foolz.us/ foolz] || [http://archive.foolz.us/info/index.html#contact info and support] ||
+|| [http://fuuka.warosu.org/ warosu] || [http://fuuka.warosu.org/jp/thread/8110957#p8110969_2 post with contact] ||
+|| [http://archive.installgentoo.net/ installgentoo] || [http://archive.installgentoo.net/faq.html faq] ||
+|| [http://archive.no-ip.org archive.no-ip] || [http://archive.no-ip.org/dis/ message board] ||
