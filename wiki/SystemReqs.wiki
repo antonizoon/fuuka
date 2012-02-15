@@ -2,7 +2,7 @@
 #labels Featured
 
 ==System requirements== 
-  * Recent version of perl (anything >= 5.8.X should be okay, must be compiled with ithreads. Do {{{perl -V | grep ithread}}} to check)
+  * Perl 5.10 or above, must be compiled with ithreads. Do {{{perl -V | grep ithread}}} to check.
   * MySQL 5.0+ (5.1+ highly recommended)
   * A webserver that can run CGI scripts or Apache with mod_perl (recommended)
   * gnuplot (version >= 4.2, gd with PNG support)
@@ -19,13 +19,13 @@ Apart from standard modules that you probably already have (CGI, Carp, Data::Dum
   * DBD::mysql (Important: you need version >= 4.0, otherwise Unicode characters will get messed up in the database. Do {{{perl -MDBD::mysql -e 'print "$DBD::mysql::VERSION\n"'}}} to check)
   * !DateTime
   * !DateTime::!TimeZone
-  * MIME::Base64::URLSafe
+  * Net::IP
   * threads::shared ships with Perl, but we require version >= 1.21. Do {{{perl -Mthreads::shared -e 'print "$threads::shared::VERSION\n"'}}} to check which version you have. If necessary, either upgrade your copy of Perl to a more recent version (both 5.8.9+ and 5.10.1+ should ship with a suitable version of this module) or just the threads::shared module itself (from CPAN, for example).
 
 ==FreeBSD ports==
 If you're running FreeBSD, just install the following ports:
 
-  * lang/perl5.10 (enable threads)
+  * lang/perl5.14 (enable threads)
   * net/p5-URI
   * databases/p5-DBI
   * security/p5-Digest-SHA1
@@ -33,5 +33,5 @@ If you're running FreeBSD, just install the following ports:
   * databases/p5-DBD-mysql
   * devel/p5-!DateTime 
   * devel/p5-!DateTime-!TimeZone
-  * converters/p5-MIME-Base64-URLSafe
+  * net-mgmt/p5-Net-IP
   * math/gnuplot (you can disable all the options in graphics/gd and all the options except for gd in math/gnuplot to avoid building X11)
