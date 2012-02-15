@@ -20,7 +20,7 @@ Apart from standard modules that you probably already have (CGI, Carp, Data::Dum
   * !DateTime
   * !DateTime::!TimeZone
   * Net::IP
-  * threads::shared ships with Perl, but we require version >= 1.21. Do {{{perl -Mthreads::shared -e 'print "$threads::shared::VERSION\n"'}}} to check which version you have. If necessary, either upgrade your copy of Perl to a more recent version (both 5.8.9+ and 5.10.1+ should ship with a suitable version of this module) or just the threads::shared module itself (from CPAN, for example).
+  * threads::shared ships with Perl, but we require version >= 1.21. Do {{{perl -Mthreads::shared -e 'print "$threads::shared::VERSION\n"'}}} to check which version you have. If necessary, either upgrade your copy of Perl to a more recent version (5.10.1+ should ship with a suitable version of this module) or just the threads::shared module itself (from CPAN, for example).
 
 ==FreeBSD ports==
 If you're running FreeBSD, just install the following ports:
