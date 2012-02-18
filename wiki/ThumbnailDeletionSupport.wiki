@@ -8,13 +8,21 @@ In that case, you can't delete thumbnails with the thumbnail deletion password, 
 
 = Procedure =
 
-  * Check which user is being used to run the webserver perl scripts. This is usually the same user your webserver runs as if you're using mod_perl or something similar. Usually it's user {{{www}}}, with default group also {{{www}}}, but this might differ ({{{www-data}}} is used on some systems). Also check the numeric ID of said user group; for me, it's 80 for both the user and the group, it may vary on your system. {{{/etc/group}}} should have this information.
-  * Add the user that you're using to run the board archiving deamon to the group of the webserver.
-  * Uncomment the chown statements in Board/Local.pm. Those should be lines 71, 76, 166 and 206. If the group's numeric id that your webserver user belongs to isn't 80, change the number 80 to the respective group id.
+  * Check which user is being used to run the webserver perl scripts. This is usually the same user your webserver runs as if you're using mod_perl or something similar. Usually it's user {{{www}}}, with default group also {{{www}}}, but this might differ ({{{www-data}}} is used on some systems).
+  * Add the user that you're using to run the board archiving deamon to the group of the webserver. Here are some examples:
+{{{
+OS X:
+sudo dseditgroup -o edit -a archive -t user _www
+FreeBSD:
+pw usermod archive -G www
+Linux:
+useradd -G www-data archive
+}}}
+  * Edit WEBSERVER_GROUP in board-config.pl and set it to the group of your webserver.
 
 Alternatively, if the procedure above is too complicated for you, or you just don't have enough permissions to perform it, you can just change the chmod statement on lines 165 and 205 to 0666 rather than 0664. This is totally not recommended, but it's your call.
 
-In addition, this will only fix permissions for newly archived files. You can fix permissions for all the existing thumbs by cd'ing into the thumbs dir and issuing:
+In addition, this will only fix permissions for newly archived files. You can fix permissions for all the existing thumbs by cd'ing into the board dir and issuing:
 {{{
 chown -R archive:www thumb; find ./thumb -type d -print0 | xargs -0 chmod 0775; \
     find ./thumb -type f -print0 | xargs -0 chmod 0664
