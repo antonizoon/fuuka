@@ -6,9 +6,11 @@ Fuuka is the software used to run various 4chan archivers. Neither me (Eksopl) n
 
 = Details =
 || *Archive* || *Contact* ||
-|| [http://archive.foolz.us/ foolz] || [http://archive.foolz.us/info/index.html#contact info and support] ||
+|| [http://archive.foolz.us/ foolz] || [http://archive.foolz.us/articles/FAQ/ faq] ||
 || [http://fuuka.warosu.org/ warosu] || [http://fuuka.warosu.org/jp/thread/8110957#p8110969_2 post with contact] ||
 || [http://archive.installgentoo.net/ installgentoo] || [http://archive.installgentoo.net/faq.html faq] ||
-|| [http://archive.no-ip.org archive.no-ip] || [http://archive.no-ip.org/dis/ message board] ||
+|| [http://archive.rebeccablacktech.com/ rebeccablacktech] || [http://archive.rebeccablacktech.com/fag.html faq] ||
+|| [https://md401.homelinux.net/4chan/ md401.homelinux] || ??? ||
+|| [http://archive.xfiles.to/ archive.xfiles] || ??? ||
 
 In addition, foolz,us uses fuuka as their archiving daemon, but they run their own software for the website frontend. Please file issues regarding to the software the foolz archive runs [https://github.com/FoOlRulez/FoOlFuuka/issues here]. If it's an issue with the dumper itself, you can report it here.
