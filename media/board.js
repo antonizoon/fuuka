@@ -172,12 +172,16 @@ function backlink() {
 			if (t.tagName == 'DIV') {
 				backlinks[ii].textContent = '>>OP';
 			}
+			if (linklist[tid[1]]) {
+				continue;
+			}
 			bl = document.createElement('a');
 			bl.className = 'backlink';
 			bl.href = '#' + replies[i].id;
 			bl.textContent = '>>' + replies[i].id.slice(1);
 			bl.onclick = new Function("replyhighlight('" + replies[i].id + "')");
 			if (!(qb = t.getElementsByClassName('quoted-by')[0])) {
+				linklist[tid[1]] = true;
 				qb = document.createElement('div');
 				qb.className = 'quoted-by';
 				qb.textContent = 'Quoted by: ';
@@ -185,10 +189,7 @@ function backlink() {
 				t.insertBefore(qb, t.getElementsByTagName('blockquote')[0]);
 			}
 			else {
-				if (linklist[replies[i].id]) {
-					continue;
-				}
-				linklist[replies[i].id] = true;
+				linklist[tid[1]] = true;
 				qb.appendChild(document.createTextNode(' '));
 				qb.appendChild(bl);
 			}
