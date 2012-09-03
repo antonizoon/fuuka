@@ -1328,7 +1328,7 @@ if($path){
 		my $post=$board->content(MEDIA $media);
 		ref $post or error $board->errstr;
 	
-		fix_post($post,'');
+		fix_post($post,{});
 
 		# Image found in the database, but it has been purged! 
 		if(!$post->{fullfile}) {
